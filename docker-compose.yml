@@ -1,0 +1,13 @@
+
+version: "3"
+services:
+  app:
+    container_name: "deadpool-app"
+    restart: always
+    build: .
+    ports:
+      - "${PORT}:3000"
+    env_file:
+      - .env
+    environment:
+      - VITE_DEADPOOL_API_URI=${VITE_DEADPOOL_API_URI}
