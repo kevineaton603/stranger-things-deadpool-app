@@ -1,6 +1,10 @@
 # Stranger Things Deadpool App
 
-## Google Deployment
+## Deployment
+
+### Netlify
+
+### Google
 
 ```
 docker compose build
