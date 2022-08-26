@@ -72,43 +72,68 @@ const HomeScreen: React.FC = () => {
             <Typography variant={'subtitle1'}>Prize Pool</Typography>
           </Grid>
         </Grid>
-        <NeonPaper
-          sx={{
-            p: 2,
+        <Stack
+          direction={{
+            sm: 'column',
+            md: 'row',
           }}
+          spacing={3}
         >
-          <Typography variant={'body1'}>{'Already have a deadpool but haven\'t paid yet?'}</Typography>
-          <Button
-            onClick={() => {
-              window.location.replace(VenmoLink);
-            }}
-            variant={'contained'}
-            fullWidth={true}
-            sx={{ my: 2 }}
-          >
-            Go to Venmo
-          </Button>
-        </NeonPaper>
-        <NeonPaper
-          sx={{
-            p: 2,
-          }}
-        >
-          <Typography variant={'body1'}>{'Checkout the winners here!'}</Typography>
-          <Button
-            onClick={() => {
-              navigate(WinnerScreenPath);
-            }}
-            variant={'contained'}
-            fullWidth={true}
+          <NeonPaper
             sx={{
-              my: 2,
+              p: 2,
               width: '100%',
             }}
           >
-            See Winners!
-          </Button>
-        </NeonPaper>
+            <Stack
+              direction={'column'}
+              justifyContent={'space-between'}
+              height={'100%'}
+            >
+              <Typography variant={'body1'}>{'Already have a deadpool but haven\'t paid yet?'}</Typography>
+              <Button
+                onClick={() => {
+                  window.location.replace(VenmoLink);
+                }}
+                variant={'contained'}
+                fullWidth={true}
+                sx={{ my: 2 }}
+              >
+                Go to Venmo
+              </Button>
+
+            </Stack>
+          </NeonPaper>
+          <NeonPaper
+            sx={{
+              p: 2,
+              width: '100%',
+            }}
+          >
+            <Stack
+              direction={'column'}
+              justifyContent={'space-between'}
+              height={'100%'}
+            >
+              <Typography variant={'body1'}>{'Checkout the winners here!'}</Typography>
+              <Button
+                onClick={() => {
+                  navigate(WinnerScreenPath);
+                }}
+                variant={'contained'}
+                fullWidth={true}
+                sx={{
+                  my: 2,
+                  width: '100%',
+                }}
+              >
+                See Winners!
+              </Button>
+            </Stack>
+
+          </NeonPaper>
+        </Stack>
+
         <Grid
           container={true}
           direction={'row'}
